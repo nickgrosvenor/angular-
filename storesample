@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+//Define both a store and a product object
+var spencers = {
+	products: [
+	{name:"Whoopie Cushion", price:100.00,qty:10000}, 
+	{name:"Raunchy birthday card", price:99.99, qty:5}
+	],
+	addInventory: function(prodName, qty){
+
+	};
+	sellProduct: function(prodName, qty){
+
+	}
+
+
+}
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+//Define both a store and a product object
+var spencers = {
+	products:[
+		{name:"Whoopie Cushion", price:100.00,qty:10000}, 
+		{name:"Raunchy birthday card", price:99.99, qty:5}
+	],
+	addInventory: function(prodName, quantity){
+		for(i=0;i< this.products.length;++i)
+			{
+			   if (products[i].name == prodName)
+			   {
+		       this.products[i].qty+=quantity;
+		       break;
+			   }
+			}
+			alert(i);
+			if (i==this.products.length)
+			{
+				this.products,push(
+					{name:prodName,price:20.00,qty:quantity}
+				);
+			}	
+
+	},
+
+	sellProduct: function(prodName, qty){
+
+	}
+}
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

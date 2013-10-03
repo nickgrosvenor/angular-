@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+.sqr{float:left; width:50px; height:50px;}
+.topLine{border-top: 3px solid black;}
+.leftLine{border-left: 3px solid black;}
+.clearfix{clear:both;}
+
+
+
+</style>
+
+<script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"> </script>
+<script src="ticTacCtrl.js"></script>
+
+</head>
+
+<body ng-app="">
+
+	{{ticTacToe.length}}
+
+
+<!-- /*
+
+<select id="treeDropDown">
+	<option ng-repeat="tree in forest.trees |filter:{alive:'true'} |orderBy:'type':true" value="{{tree.id}}">{{tree.type + " is " + (tree.alive ? "alive":"dead" ) + "!" }}</li>
+</select>	*/ -->
+
+<div id="container" ng-controller="TicTacCtrl">
+	<div ng-repeat="row in ticTacToe">
+
+
+
+		<div ng-class="{sqr:true,topLine:$parent.$index != 0, leftLine:$index !=0}" 
+		ng-repeat="cell in row track by $index"
+					ng-click="clickSquare(
+					$parent.$index, $index)"
+		>
+
+			{{$parent.$index + "," + $index}}
+			
+		</div>	
+		<div class="clearfix"></div>
+	</div>		
+</div>
+</body>
+</html>
